@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: cart-service
+  redis:
+    host: 127.0.0.1
 eureka:
   client:
     service-url:
@@ -15,7 +17,7 @@ eureka:
     ip-address: 127.0.0.1
     #显示ip地址
     prefer-ip-address: true
-    instance-id: ${eureka.instance.ip-address}.${sever.port}
+    instance-id: ${eureka.instance.ip-address}.${server.port}
     #租约更新间隔(以秒为单位)
     lease-renewal-interval-in-seconds: 5
     #租约过期持续时间(以秒为单位)
